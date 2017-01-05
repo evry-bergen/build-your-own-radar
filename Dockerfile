@@ -1,10 +1,5 @@
-FROM node:4-alpine
+FROM nginx
 
-WORKDIR /usr/src/app
+WORKDIR /usr/share/nginx/html
 
-COPY package.json .
-RUN npm install --production
-
-COPY . .
-
-CMD [ "npm", "run", "dev" ]
+COPY dist .
