@@ -64,3 +64,13 @@ Make sure you have nodejs installed.
      $ docker run -p 8080:8080 -v $PWD:/app -w /app -it node:7.3.0 /bin/sh -c 'npm install && npm run dev'
 
 After building it will start on localhost:8080
+=======
+
+## Build
+- `npm install`
+- `webpack --prod`
+- `docker build build-your-own-radar`
+- `docker tag hash repo.evrybgo.no:latest`
+
+
+
