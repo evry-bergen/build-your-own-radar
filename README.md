@@ -57,3 +57,13 @@ Pull requests are welcome; please write tests whenever possible.
 - `npm install`
 - `npm test` - to run your tests
 - `npm run dev` - to run application in localhost:8080. This will watch the .js and .css files and rebuild on file changes
+
+
+## Build
+- `npm install`
+- `webpack --prod`
+- `docker build build-your-own-radar`
+- `docker tag hash repo.evrybgo.no:latest`
+
+
+
