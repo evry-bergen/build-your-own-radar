@@ -1,9 +1,10 @@
-FROM risingstack/alpine:3.3-v4.2.6-1.1.3
+FROM node:4-alpine
 
-COPY package.json package.json
-RUN npm install
+WORKDIR /usr/src/app
 
-# Add your source files
+COPY package.json .
+RUN npm install --production
+
 COPY . .
 
-CMD npm run dev
+CMD [ "npm", "run", "dev" ]
